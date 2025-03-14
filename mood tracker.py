@@ -38,8 +38,9 @@ st.header("Your Mood Visualization")
 moods = ['Not Happy', 'Okay', 'Happy']
 mood_counts = [0, 0, 0]  # Sample counts for each mood
 
-# Simple random update to show how many users are feeling each mood
-mood_counts[mood_slider - 1] += 1  # Update based on selected mood
+# Map mood to index and update the count
+mood_mapping = {"Not Happy": 0, "Okay": 1, "Happy": 2}
+mood_counts[mood_mapping[mood_slider]] += 1  # Update based on selected mood
 
 # Create a bar plot for visualization
 fig, ax = plt.subplots()
