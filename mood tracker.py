@@ -13,13 +13,10 @@ st.text("We'd love to know how you're feeling today.")
 mood = st.text_input("How are you feeling today?", "Type here...")
 
 # Slider to capture mood
-mood_slider = st.slider(
+mood_slider = st.select_slider(
     "Select your mood today:",
-    min_value=1,
-    max_value=3,
-    step=1,
-    format="%(value)s",
-    help="Choose your mood: 1 - Not Happy, 2 - Okay, 3 - Happy"
+    options=["Not Happy", "Okay", "Happy"],
+    help="Choose your mood: Not Happy, Okay, or Happy"
 )
 
 # Slider mapping
